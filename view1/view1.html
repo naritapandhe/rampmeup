@@ -1,0 +1,139 @@
+<div class="container" ng-controller="View1Ctrl">
+    <div class="py-5 text-center">
+        <h2>Fill in the details</h2>
+            <p class="lead">Customize the presentation according to your needs. 
+            Add new hire information, any important contacts, checklist to follow.</p>
+        
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <form novalidate class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <h4> New Hire Info </h4>
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <div class="row">
+                            <label for="firstName">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" ng-model="user.firstName">
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 mb-3">
+                        <div class="row">
+                            <label for="firstName">Last name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" ng-model="user.lastName">
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-md-12">
+                        <div class="row">
+                            <input type="button" class="btn btn-primary" ng-click="gotoNext(user)" value="Goto Next" />
+                        </div>
+                    </div> -->
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <h4> Administrative Info </h4>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="row">
+                            <label for="firstName">Office Admin Contact</label>
+                            <input type="text" class="form-control" id="adminName" placeholder="" value="" required="" ng-model="user.adminName">
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="row">
+                            <div class="alert alert-secondary col-md-12" role="alert">
+                                <div class="row">
+                                    <p> Below are a list of contacts regarding administrative needs </p>
+                                </div>
+                                <div class="row">
+                                    <ul>
+                                        <li>For help on any of the following you can reach out to our team office administrator
+                                            <ul>
+                                                <li>Office supplies – keyboard, mouse, dock station, etc.
+                                                </li>
+                                                <li>Secure Admin Workstation (SAW) – desktop, laptop, etc.
+                                                </li>
+                                                <li>Secondary hardware
+                                                </li>
+                                                <li>New Hire Setup
+                                                </li>
+                                                <li>
+                                                    Vendor Account Creation/Termination
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <br />
+                                        <li>If you need table lamp, privacy screen etc., please go to <a href="https://www.msfacilities.com/" target="_blank">https://www.msfacilities.com/</a>
+                                            Chat box in the lower right for any request is the fastest way.
+                                        </li>
+                                        <br />
+                                        <li>If you need technical help regarding desktop / laptop setup, you can IM <a href="helpdesk@microsoft.com">helpdesk@microsoft.com</a>
+                                            in Skype for Business
+                                        </li>
+                                        <br />
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-md-12">
+                        <div class="row">
+                            <input type="button" class="btn btn-primary" ng-click="gotoNext(user)" value="Goto Next" />
+                        </div>
+                    </div> -->
+                </div>
+                <br />
+                <div class="row">
+                        <div class="col-md-12">
+                                <div class="row">
+                                    <h4> Checklist </h4>
+                                </div>
+                            </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-7">
+                                        <input type="text" class="form-control" id="todoInput" placeholder="" value="" required="" ng-model="user.todoInput">
+                                </div>
+                                <div class="col-md-5">
+                                        <input type="button" class="btn btn-info" ng-click="todoAdd(user)" value="Add Item" />
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-8">
+                                <div class="alert alert-secondary col-md-12" role="alert">
+                                        <div ng-repeat="x in todoList">
+                                                <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+                                                <br/>
+                                        </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <div class="row">
+                                <input type="button" class="btn btn-success" ng-click="gotoNext(user)" value="Preview Presentation &raquo;" />
+                            </div>
+                        </div>
+                    </div>
+
+            </form>
+
+        </div>
+        <!-- <pre>user = {{user | json}}</pre>
+        <pre>master = {{master | json}}</pre> -->
+    </div>
+</div>
